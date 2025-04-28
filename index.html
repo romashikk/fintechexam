@@ -9,6 +9,14 @@
 <body>
     <div class="main-container">
         <div class="container">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <label for="testSelector" style="font-weight: bold;">Выберите тест:</label>
+                <select id="testSelector">
+                    <option value="exam">вопросы шмары</option>
+                    <option value="exam2">вопросы Gemini</option>
+                </select>
+                <span id="testTitle" style="font-size: 1.1rem; font-weight: bold; margin-left: 1rem;"></span>
+            </div>
             <div class="progress-bar">
                 <div class="progress-text">Вопрос <span id="currentQuestion">1</span> из 35</div>
                 <div class="progress-track">
