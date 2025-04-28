@@ -107,7 +107,17 @@ document.getElementById('testSelector').addEventListener('change', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('testTitle').textContent = tests[currentTestKey].title;
+    document.getElementById('testSelector').value = 'exam';
+    document.getElementById('testTitle').textContent = tests['exam'].title;
+    currentTestKey = 'exam';
+    questions = tests[currentTestKey].questions;
+    currentQuestionIndex = 0;
+    score = 0;
+    answeredQuestions = new Set();
+    userAnswers = [];
+    shuffledAnswersMap = {};
+    showQuestion();
+    updateAttemptsList();
 });
 
 function shuffleArray(array) {
