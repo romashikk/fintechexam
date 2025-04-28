@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по курсу "Практикум Финтех 2"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-text">Вопрос <span id="currentQuestion">1</span> из 35</div>
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="questionText"></h2>
+                <div id="answers" class="answers-container"></div>
+            </div>
+
+            <div class="result-container" style="display: none;">
+                <h2>Результаты теста</h2>
+                <div class="score-container">
+                    <div class="score-text">
+                        <span id="finalScore">0</span> из 35
+                    </div>
+                    <div class="score-percentage">
+                        <span id="percentageScore">0</span>%
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="resultChart"></canvas>
+                </div>
+                <div class="attempt-name-container">
+                    <input type="text" id="attemptName" placeholder="Название попытки" class="attempt-name-input">
+                    <button id="saveAttemptButton" class="save-button">Сохранить попытку</button>
+                </div>
+                <div class="buttons-container">
+                    <button id="showAllQuestionsButton" class="action-button">Показать все вопросы</button>
+                    <button id="restartButton" class="restart-button">Пройти тест заново</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-sidebar">
+            <h3>История попыток</h3>
+            <div id="attemptsList" class="attempts-list"></div>
+        </div>
+    </div>
+
+    <div id="allQuestionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Все вопросы и ответы</h2>
+            <div id="allQuestionsList" class="all-questions-list"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
